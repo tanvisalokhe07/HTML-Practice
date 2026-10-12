@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial,sans-serif;
+            padding: 40px;
+            background-color: #2f2f2f;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px;
+        }
+        .product{
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px gray;
+        }
+        .product h2{
+            margin-bottom: 10px;
+        }
+        .price{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color:white;
+            border-radius:5px;
+            cursor:pointer;     
+        } 
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <div class="product-container">
+        <div class="product">
+            <h2>Laptop</h2>
+            <p class="price">₹500000;</p>
+            <button>Buy Now</button>
+            </div>
+            <div class="product">
+                <h2>Mobile</h2>
+                <p class="price">₹250000</p>
+                <button>Buy Now</button>
+                </div>
+                <div class="product">
+                <h2>Headphone</h2>
+                <p class="price">₹2000</p>
+                <button>Buy Now</button>
+                </div>
+                <div class="product">
+                <h2>Keyboard</h2>
+                <p class="price">₹1500</p>
+                <button>Buy Now</button>
+                </div>
+                <div class="product">
+                <h2>Mouse</h2>
+                <p class="price">₹800</p>
+                <button>Buy Now</button>
+                </div>
+                <div class="product">
+                <h2>Smart Watch</h2>
+                <p class="price">₹3500</p>
+                <button>Buy Now</button>
+                </div>
+                </div>
+
+</body>
+</html>

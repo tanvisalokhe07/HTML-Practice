@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p class="set">Apple</p> 
+    <p class="set">Banana</p>
+    <p class="get">Mango</p>
+    <p id="text">kivi</p>
+    <img id="photo"src="crop.jpg" alt="image" width="200">
+    <h1 id="p">Hello</h1>
+    <div id="Container"></div>
+    <p id="s">Remove Element</p>
+    </body>
+     <script>
+        const b=document.getElementsByClassName("set");
+        console.log(b[0].innerHTML);
+       const s= document.getElementsByTagName("p");
+        console.log(s.length);
+        let q=document.querySelector(".set");
+        console.log(q.innerHTML);
+        q=document.querySelectorAll(".set");
+        
+        console.log(q[1].innerHTML);
+        document.getElementById("text").innerText="orange"
+        document.getElementById("photo").src="gym.jpg";
+        document.getElementById("photo").width="400";
+        const change=document.getElementById("p");
+        change.style.color="red";
+        change.style.fontSize="22px";
+        change.style.background="pink";
+        let newpara=document.createElement("p");
+        newpara.innerText="create a new paragraph";
+        document.getElementById("Container").appendChild(newpara);
+        let a=document.getElementById("s");
+        a.remove();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <input type="tel"placeholder="Enter your Mobile number" maxlength="10" minlength="10" pattern="[0-9]{10}" required id="s">
+    <button type="button" onclick="check()">Click me</button>
+    <p id="msg"></p>
+    </form>
+    <script>
+        function check(){
+            
+           let s=document.getElementById("s").value;
+           let str=s.slice((-4));
+           console.log(str);
+           let r="";
+           for(let i=0;i<4;i++){
+           r+=str[Math.floor(Math.random()*str.length)];
+           }
+           console.log(r);
+           let msg=document.getElementById("msg");
+          msg.innerHTML=r;
+        }
+    </script>
+</body>
+</html>

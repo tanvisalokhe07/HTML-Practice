@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Company
+    {
+        dept(){
+            console.log("Employee is working in Technical Department ");
+        }
+    }
+     class Employee extends Company
+     {
+        disp(){
+            console.log("Employee work in company");
+        }
+     }
+     let e=new Employee();
+     e.dept();
+     e.disp();
+    </script>
+</body>
+</html>

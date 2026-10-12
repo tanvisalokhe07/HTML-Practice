@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation using JavaScript</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+ <form onsubmit="return validateForm()">
+ <label>Full Name:</label><br>
+    <input type="text" id="name"><br><br>
+<label>Email:</label><br>
+    <input type="text" id="email"><br><br>
+ <label>Password:</label><br>
+    <input type="password" id="password"><br><br>
+
+    <label>Confirm Password:</label><br>
+    <input type="password" id="confirmPassword"><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="text" id="mobile"><br><br>
+
+    <label>Age:</label><br>
+    <input type="number" id="age"><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="msg"></p>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirmPassword").value;
+      let mobile = document.getElementById("mobile").value.trim();
+      let age = document.getElementById("age").value.trim();
+      let msg = document.getElementById("msg");
+
+      // Name validation
+      if (name === "" || !/^[A-Za-z\s]+$/.test(name)) {
+        //msg.innerHTML = "Please enter a valid name!";
+        alert(" Please enter a valid name!");
+        document.getElementById("name").focus();
+        return false;
+      }
+
+      // Email validation
+      let emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      if (email === "" || !emailPattern.test(email)) {
+        msg.innerHTML = "Please enter a valid email!";
+        return false;
+      }
+
+      // Password validation
+      if (password === "" || password.length < 6) {
+        msg.innerHTML = " Password must be at least 6 characters!";
+        return false;
+      }
+
+      // Confirm password validation
+      if (confirmPassword !== password) {
+        msg.innerHTML = " Passwords do not match!";
+        return false;
+      }
+
+      // Mobile validation
+      if (!/^[0-9]{10}$/.test(mobile)) {
+        msg.innerHTML = " Enter a valid 10-digit mobile number!";
+        return false;
+      }
+
+      // Age validation
+      if (age === "" || age < 18 || age > 100) {
+        msg.innerHTML = "Age must be between 18 and 100!";
+        return false;
+      }
+
+      msg.innerHTML = " Form submitted successfully!";
+      return false; // prevent actual form submission (for demo)
+    }
+  </script>
+</body>
+</html>
+
+

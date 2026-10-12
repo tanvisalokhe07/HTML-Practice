@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Fruits{
+            cut(){
+           console.log("eatting");
+        }
+    }
+    class Mango extends Fruits
+    {
+        slice(){
+            console.log("make slices of mango ");
+        }
+    }
+    class Orange extends Fruits{
+        peel(){
+            console.log("peel the orange");
+        }
+    }
+    let a=new Mango();
+    a.cut();
+    a.slice();
+    let b=new Orange();
+    b.cut();
+    b.peel();
+
+    </script>
+</body>
+</html>

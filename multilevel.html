@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Grandfather{
+            prop(){
+                console.log("Grandfather gave his property to his son");
+            }
+        }
+        class Father extends Grandfather{
+            accept(){
+                console.log("son accepted the property from his father");
+            }
+        }
+        class Son extends Father{
+            accept1(){
+                console.log("a granchild accepted the properties of both of them");
+            }
+        }
+        let multi=new Son();
+        multi.prop();
+        multi.accept();
+        multi.accept1();
+    </script>
+</body>
+</html>
